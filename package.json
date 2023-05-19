@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "react-scripts": "^5.0.1",
+    "yarn": "^1.22.19"
+  },
+  "scripts": {
+    "client": "cd blog && yarn start",
+    "server": "nodemon server.js",
+    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
+    "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  }
+}

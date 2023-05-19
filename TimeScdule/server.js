@@ -9,7 +9,7 @@ const cors = require('cors');
 const db = mysql.createPool({ //서버에서 데이터베이스 연결을 위한 데이터베이스 운영자 계정연동
    host : 'localhost',
    user : 'root',
-   password : 'gkackdqja123!',
+   password : '1234',
    database: 'initscduleapp',
    multipleStatements: true
 

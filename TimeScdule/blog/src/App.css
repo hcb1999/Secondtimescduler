@@ -1,0 +1,532 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap");
+
+@font-face {
+  font-family: 'Happiness-Sans-Title';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/Happiness-Sans-Title.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+*{
+  font-family: 'Happiness-Sans-Title';
+}
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.addbtn{
+  position: fixed;
+  right: 10px;
+  bottom: 100px;
+  z-index: 10;
+}
+hr{
+  margin-top: 37px;
+  width:300px;
+  height:0.5px;
+  border:0;
+  background: #ccc;
+}
+.App-link {
+  color: #61dafb;
+}
+.Container{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 50vw;
+  max-width: 700px; 
+  height: 50vh;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  display: flex;
+  border-radius: 10px;
+  justify-content: space-between;
+  padding: 30px;
+  align-items: center; 
+  flex-direction: column; 
+  z-index: 20;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.12), 0 2px 5px rgba(0,0,0,0.24);
+  @media (max-width:700px){
+    width: 70vw;
+}
+@media (max-width:450px){
+  width: 100vw;
+}
+}
+.userface {
+ float: left;
+}
+.Header{
+  background-color: white;
+ margin-top: 7px;
+  float: left;
+}
+.textleft{
+  text-align: left;
+}
+.textright{
+  float: right;
+}
+.Image{
+  max-width: 200px;
+  max-height: 200px;
+}
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+
+
+.body {
+  margin: 0;
+  height: 100vh;
+  color: #f1eded;
+  font-family: "Roboto", sans-serif;
+}
+#root {
+  height: 100%;
+}
+.app {
+  height: 100%;
+  display: flex;
+  position: relative;
+}
+.app .btn-toggle {
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+  background: #353535;
+  color: #fff;
+  text-align: center;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  display: none;
+}
+.app .sidebar-btn-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.app .sidebar-btn-wrapper .sidebar-btn {
+  padding: 1px 15px;
+  border-radius: 40px;
+  background: rgba(240, 236, 236, 0.05);
+  color: #f1eded;
+  text-decoration: none;
+  margin: 0 auto;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.app .sidebar-btn-wrapper .sidebar-btn span {
+  margin-left: 5px;
+  font-size: 13px;
+}
+.app .sidebar-btn-wrapper .sidebar-btn:hover {
+  color: #d8d8d8;
+}
+.app .collapsed .sidebar-btn {
+  display: inline-block;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  line-height: 40px;
+  padding: 0;
+}
+.app main {
+  width: 100%;
+  display: block;
+}
+
+.app main header {
+  margin-bottom: 20px;
+  margin-top:50px;
+}
+
+.app .app-content {
+  padding: 24px;
+}
+
+.app .social-bagdes {
+  margin-top: 10px;
+}
+.app .social-bagdes img {
+  margin: 5px;
+}
+.app .block {
+  display: flex;
+  margin-bottom: 24px;
+  font-size: 14px;
+  color: black;
+}
+.app .block > span {
+  margin-left: 10px;
+}
+.app.rtl {
+  direction: rtl;
+  text-align: right;
+}
+.app.rtl header h1 {
+  transform: translateX(20px);
+}
+.app.rtl .block {
+  direction: rtl;
+}
+.app.rtl .block > span {
+  margin-left: 0;
+  margin-right: 10px;
+}
+.app.rtl .sidebar-btn-wrapper .sidebar-btn span {
+  margin-left: 0;
+  margin-right: 5px;
+}
+@media (max-width: 767.98px) {
+  .app {
+    overflow-x: hidden;
+  }
+  .app header h1 {
+    font-size: 24px;
+  }
+}
+@media (max-width: 767px) {
+  .app .btn-toggle {
+    display: flex;
+  }
+  .app.rtl .btn-toggle {
+    margin-left: auto;
+  }
+}
+.badge {
+  padding: 3px 6px;
+  font-size: 9px;
+  letter-spacing: 1px;
+  border-radius: 15px;
+}
+.badge.red {
+  color: #fff;
+  background: #d63030;
+}
+.badge.gray {
+  color: #fff;
+  background: #777;
+}
+.badge.yellow {
+  color: #000;
+  background: #ffd331;
+}
+
+.sidebar-header {
+  padding-top: 2.4rem;
+  padding-bottom: 2.4rem;
+  margin-bottom: 3.2rem;
+  font-weight: bold;
+  background: rgba(240, 236, 236, 0.05);
+  text-align: center;
+}
+.sidebar-header .user-email {
+  font-size: 14px;
+  color: darkgray;
+}
+.pro-sidebar {
+  width: 280px;
+  max-width: 280px;
+  min-width: 280px;
+}
+
+@media (max-width: 768px) {
+  .pro-sidebar.md {
+    position: fixed;
+    left: -280px;
+  }
+  .pro-sidebar.md.rtl {
+    left: auto;
+    right: -280px;
+  }
+}
+
+@media (max-width: 767px) {
+  .app.rtl .btn-toggle {
+    margin-left: 16px;
+    margin-right: 0px;
+  }
+}
+.user-image {
+  height: 80px;
+  width: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 7px solid #252f3e;
+}
+.section-left{
+  width:15vw;
+}
+#header{
+    margin-top: 30px;
+}
+.Header-logo{
+  font-size: 30px;
+  width: 15vw;
+  height:64px;
+  border-bottom: 1px solid rgb(211, 209, 209);
+}
+.section-left-content{
+}
+.friendlist{
+  font-size:18px;
+
+}
+
+
+
+.homepage__container {
+  max-width: 480px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 50px 0;
+}
+
+/* ToDo App Input Box */
+.todoapp__inputbox {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.todoapp__inputbox-inp {
+  flex: 1;
+  border: none;
+  border-bottom: 1px solid #f1f3f5;
+  padding: 10px;
+  height: 50px;
+  box-sizing: border-box;
+}
+
+.todoapp__inputbox-inp:focus {
+  outline: none;
+}
+
+.todoapp__inputbox-add-btn {
+  border: none;
+  border-radius: 0;
+  background-color: #d0ebff;
+  color: #1c7ed6;
+  height: 50px;
+  width: 50px;
+  font-weight: bold;
+}
+
+/* ToDo Item List */
+.todoapp__list {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.todoapp__list-tit {
+  font-weight: bold;
+  margin: 0;
+}
+
+.todoapp__list-ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0;
+}
+
+/* ToDo Item */
+.todoapp__item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  height: 36px;
+}
+
+.todoapp__item:last-child {
+  margin-bottom: 0;
+}
+
+.todoapp__item-checkbox {
+  margin-right: 10px;
+}
+
+.todoapp__item-ctx {
+  flex: 1;
+}
+
+.todoapp__item-edit-btn,
+.todoapp__item-delete-btn {
+  border: none;
+  border-radius: 0;
+  height: 36px;
+  width: 36px;
+  background-color: inherit;
+}
+
+.todoapp__item-edit-btn:hover,
+.todoapp__item-delete-btn:hover {
+  cursor: pointer;
+  background-color: #d0ebff;
+}
+
+.todoapp__item-edit-btn {
+  margin-right: 3px;
+}
+.todoapp__item-ctx-checked {
+  font-style: italic;
+  text-decoration: line-through;
+  color: #868e96;
+}
+.Container_daily_name{
+  font-size:35px;
+  font-weight:1000;
+}
+.Container_submit_button{
+  border-radius: 4px;
+box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);  
+cursor: pointer;
+  font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    margin: 0;
+      padding: 0.5rem 1rem;
+      transition: 0.5s;
+        cursor: pointer;
+        background-color: rgb(128, 128, 201);
+        color: white;
+          border: none;
+}
+/*모달 css*/
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal button {
+  outline: none;
+  cursor: pointer;
+  border: 0;
+}
+
+.modal>section {
+  width: 90%;
+  max-width: 450px;
+  margin: 0 auto;
+  border-radius: 0.3rem;
+  background-color: #fff;
+  /* 팝업이 열릴때 스르륵 열리는 효과 */
+  animation: modal-show 0.3s;
+  overflow: hidden;
+}
+
+.modal>section>header {
+  position: relative;
+  padding: 16px 64px 16px 16px;
+  background-color: #f1f1f1;
+  font-weight: 700;
+}
+
+.modal>section>header button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 30px;
+  font-size: 21px;
+  font-weight: 700;
+  text-align: center;
+  color: #999;
+  background-color: transparent;
+}
+
+.modal>section>main {
+  padding: 16px;
+  border-bottom: 1px solid #dee2e6;
+  border-top: 1px solid #dee2e6;
+}
+
+.modal>section>footer {
+  padding: 12px 16px;
+  text-align: right;
+}
+
+.modal>section>footer button {
+  padding: 6px 12px;
+  color: #fff;
+  background-color: #6c757d;
+  border-radius: 5px;
+  font-size: 13px;
+}
+
+.modal.openModal {
+  display: flex;
+  align-items: center;
+  /* 팝업이 열릴때 스르륵 열리는 효과 */
+  animation: modal-bg-show 0.3s;
+}
+
+@keyframes modal-show {
+  from {
+    opacity: 0;
+    margin-top: -50px;
+  }
+
+  to {
+    opacity: 0;
+    margin-top: 0;
+  }
+}
+
+@keyframes modal-bg-show {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

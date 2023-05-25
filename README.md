@@ -5,7 +5,7 @@
 
 <img src="https://capsule-render.vercel.app/api?type=shark&color=auto&height=300&section=header&text=Scheduler%20&fontSize=90" />
 <br/><br/>
-일정을 추가하여 관리할 수 있는 Scheduler를 만들고 친구와 일정을 공유하고싶어 만들고 싶은 프로젝트입니다.
+일정을 추가하여 관리할 수 있는 Scheduler를 만들고 친구와 일정을 공유하고싶어 만든 프로젝트입니다.
 
 mysql를 통해 로그인기능과 실시간 데이터베이스 기능을 구현하였습니다.
 
